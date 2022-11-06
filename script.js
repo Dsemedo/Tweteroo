@@ -10,56 +10,9 @@ const listaTweets = [
     username: "Usuario1",
     tweet: "eu amo o hub",
   },
-  {
-    username: "Usuario1",
-    tweet: "eu amo o hub",
-  },
-  {
-    username: "Usuario1",
-    tweet: "eu amo o hub",
-  },
-  {
-    username: "Usuario1",
-    tweet: "eu amo o hub",
-  },
-  {
-    username: "Usuario1",
-    tweet: "eu amo o hub",
-  },
-  {
-    username: "Usuario1",
-    tweet: "eu amo o hub",
-  },
-  {
-    username: "Usuario1",
-    tweet: "eu amo o hub",
-  },
-  {
-    username: "Usuario1",
-    tweet: "eu amo o hub",
-  },
-  {
-    username: "Usuario1",
-    tweet: "eu amo o hub",
-  },
-  {
-    username: "Usuario1",
-    tweet: "eu amo o hub",
-  },
 ];
 
-const listaUsers = [
-  {
-    username: "bob1",
-    avatar:
-      "https://super.abril.com.br/wp-content/uploads/2020/09/04-09_gato_SITE.jpg?quality=70&strip=info",
-  },
-  {
-    username: "bob2",
-    avatar:
-      "https://super.abril.com.br/wp-content/uploads/2020/09/04-09_gato_SITE.jpg?quality=70&strip=info",
-  },
-];
+const listaUsers = [];
 
 app.listen(5000, () => {
   console.log("Server running in port: 5000");
@@ -67,7 +20,7 @@ app.listen(5000, () => {
 
 app.get("/tweets", (req, res) => {
   console.log(req.params);
-  res.send(listaTweets);
+  res.send(listaTweets.slice(-10));
 });
 
 app.post("/tweets", (req, res) => {
